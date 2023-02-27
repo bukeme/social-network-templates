@@ -1,0 +1,60 @@
+:root {
+	--tertiary-color: #eff2f6;
+	--secondary-color: #0f6fec;
+	--secondary-color-light: #e6f0fd;
+	--color-grey: rgba(0,0,0,.5);
+}
+
+.bg-tertiary {
+	background-color: var(--tertiary-color);
+}
+
+.icon-lg {
+	font-size: 20px;
+}
+
+.nav-item-line.active {
+	color: var(--secondary-color) !important;
+	position: relative;
+/*	margin-top: -20px !important;*/
+/*	margin-bottom: -20px !important;*/
+}
+
+.nav-item-line.active::before {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: var(--secondary-color);
+}
+
+.f-sm {
+	font-size: 11px !important;
+}
+
+.f-lg {
+	font-size: 20px;
+}
+
+.color-grey {
+	color: var(--color-grey);
+}
+
+.color-secondary {
+	color: var(--secondary-color);
+}
+
+.bg-secondary-light {
+	background-color: var(--secondary-color-light);
+}
+
+.profile-btn {
+	color: var(--secondary-color);
+}
+
+.profile-btn:hover {
+	color: white !important;
+	background-color: var(--secondary-color);
+}
