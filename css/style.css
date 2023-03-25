@@ -3,6 +3,8 @@
 	--secondary-color: #0f6fec;
 	--secondary-color-light: #e6f0fd;
 	--color-grey: rgba(0,0,0,.5);
+	--color-light-grey: rgba(0, 0, 0, .1);
+	--color-lighter-grey: rgba(0, 0, 0, .05);
 }
 
 .bg-tertiary {
@@ -38,8 +40,24 @@
 	font-size: 20px;
 }
 
+.f-w6 {
+	font-weight: 600;
+}
+
 .color-grey {
 	color: var(--color-grey);
+}
+
+.background-grey {
+	background-color: var(--color-grey);
+}
+
+.background-lgrey {
+	background-color: var(--color-light-grey) !important;
+}
+
+.background-llgrey {
+	background-color: var(--color-lighter-grey) !important;
 }
 
 .color-secondary {
@@ -50,11 +68,13 @@
 	background-color: var(--secondary-color-light);
 }
 
-.profile-btn {
+.profile-btn,
+.create-group {
 	color: var(--secondary-color);
 }
 
-.profile-btn:hover {
+.profile-btn:hover,
+.create-group:hover {
 	color: white !important;
 	background-color: var(--secondary-color);
 }
@@ -63,6 +83,7 @@ img {
 	width: 100%;
 	height: 100% !important;
 	object-fit: cover;
+	cursor: pointer;
 }
 
 a:link,
@@ -118,4 +139,77 @@ a:active {
 
 a.left-nav-link:hover {
 	color: var(--secondary-color) !important;
+}
+
+.profile__profile-img {
+	width: 150px;
+	height: 150px;
+}
+
+.profile__name-row {
+	position: absolute;
+	top: calc(100% + 20px);
+	width: calc(100% - 180px);
+	left: 180px;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 18px;
+}
+
+.profile__pre-about {
+	padding-top: 100px;
+}
+
+.profile__profile-nav-link.active::before {
+	bottom: -5px;
+}
+
+.profile__profile-nav-link,
+.hover-blue {
+	transition: all 0.25s ease-in-out;
+}
+
+.profile__profile-nav-link:hover,
+.hover-blue:hover {
+	color: var(--secondary-color) !important;
+}
+
+.group-link:hover,
+.group-link:active {
+	background-color: var(--color-lighter-grey);
+}
+
+.group-link.active {
+	background-color: var(--color-lighter-grey);
+}
+
+.group-link.active .rounded-circle {
+	background-color: var(--secondary-color) !important;
+	color: white;
+}
+
+.group-link {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+}
+
+@media screen and (max-width: 991px) {
+	.profile__profile-img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.profile__name-row {
+		top: calc(100% + 50px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: initial;
+		padding-right: 0;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.profile__pre-about {
+		padding-top: 180px;
+	}
 }

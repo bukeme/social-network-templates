@@ -41,10 +41,10 @@
 				</a>
 			</li>
 			<li class="nav-item d-sm-none mx-3 position-relative">
-				<a href="#" class="nav-link">
+				<a href="#" class="nav-link bar-nav">
 					<i class="fa fa-bars icon-lg color-secondary"></i>
 				</a>
-				<div class="position-absolute rounded bg-white shadow" style="top: 105%; right: 0; z-index: 3;">
+				<div class="position-absolute rounded bg-white shadow d-none mobile-nav" style="top: 105%; right: 0; z-index: 3;">
 					<ul class="list-group">
 						<li class="list-group-item d-flex align-items-center">
 							<a href="#" class="d-flex align-items-center w-100">
@@ -79,7 +79,8 @@
 		</ul>
 		<div class="d-flex align-items-center">
 			<form class="position-relative">
-				<input class="form-control d-none d-md-block" placeholder="Search website..." type="text" name="search">
+				<input class="form-control d-none d-md-block rounded-pill" placeholder="Search website..." type="text" name="search" style="padding-left: 40px;">
+				<i class="fa fa-search position-absolute text-muted d-none d-md-block" style="top: 50%; left: 15px; transform: translateY(-50%);"></i>
 				<a href="#" class="d-md-none mr-2">
 					<i class="fa fa-search icon-lg color-secondary"></i>
 				</a>
@@ -122,9 +123,9 @@
 	<div class="container-fluid">
 		<div class="row p-3">
 			<div class="col-lg-3 d-none d-lg-block">
-				<div class="bg-white">
-					<ul class="list-unstyled pt-3 px-3">
-						<li class="">
+				<div class="bg-white p-3">
+					<ul class="list-unstyled">
+						<li class="mb-3">
 							<a href="#" class="d-flex align-items-center text-dark left-nav-link">
 								<div style="padding: 10px;" class="rounded-circle d-flex justify-content-center align-items-center bg-light">
 									<i class="fa fa-list-alt"></i>
@@ -132,7 +133,7 @@
 								<span class="font-weight-bold ml-2">Feed</span>
 							</a>
 						</li>
-						<li class="mt-3">
+						<li class="mb-3">
 							<a href="#" class="d-flex align-items-center text-dark left-nav-link">
 								<div style="padding: 10px;" class="rounded-circle d-flex justify-content-center align-items-center bg-light">
 									<i class="fa fa-users"></i>
@@ -140,7 +141,7 @@
 								<span class="font-weight-bold ml-2">Groups</span>
 							</a>
 						</li>
-						<li class="mt-3">
+						<li class="mb-3">
 							<a href="#" class="d-flex align-items-center text-dark left-nav-link">
 								<div style="padding: 10px;" class="rounded-circle d-flex justify-content-center align-items-center bg-light">
 									<i class="fa fa-bell"></i>
@@ -148,7 +149,7 @@
 								<span class="font-weight-bold ml-2">Notifications</span>
 							</a>
 						</li>
-						<li class="mt-3">
+						<li class="mb-3">
 							<a href="#" class="d-flex align-items-center text-dark left-nav-link">
 								<div style="padding: 10px;" class="rounded-circle d-flex justify-content-center align-items-center bg-light">
 									<i class="fa fa-gear"></i>
@@ -531,9 +532,15 @@
 	<script>
 		const profileImg = document.querySelector('.profile-img');
 		const profileElement = document.querySelector('.profile-element');
+		const barNav = document.querySelector('.bar-nav');
+		const mobileNav = document.querySelector('.mobile-nav');
 
 		profileImg.addEventListener('click', function() {
 			profileElement.classList.toggle('d-none')
+		});
+
+		barNav.addEventListener('click', function() {
+			mobileNav.classList.toggle('d-none');
 		})
 	</script>
 </body>
