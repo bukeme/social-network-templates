@@ -5,6 +5,39 @@
 	--color-grey: rgba(0,0,0,.5);
 	--color-light-grey: rgba(0, 0, 0, .1);
 	--color-lighter-grey: rgba(0, 0, 0, .05);
+	height: 100%;
+}
+
+body {
+	height: 100%;
+/*	padding-top: 68px;*/
+}
+
+body.stop-scroll {
+	overflow: hidden;
+}
+
+.chat-list::-webkit-scrollbar {
+	width: 8px;
+}
+
+.chat-list:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 180, 180, 0.3);
+  border-radius: 10px;
+}
+
+.chat-left-mobile,
+.chat-overlay-mobile {
+	transition: all 0.35s ease-in-out;
+}
+
+.chat-left-mobile.active {
+	left: 0 !important;
+}
+
+.chat-overlay-mobile.active {
+	visibility: visible !important;
+	opacity: 1 !important;
 }
 
 .bg-tertiary {
@@ -40,6 +73,10 @@
 	font-size: 20px;
 }
 
+.f-xl {
+	font-size: 25px;
+}
+
 .f-w6 {
 	font-weight: 600;
 }
@@ -69,12 +106,12 @@
 }
 
 .profile-btn,
-.create-group {
+.blue-link {
 	color: var(--secondary-color);
 }
 
 .profile-btn:hover,
-.create-group:hover {
+.blue-link:hover {
 	color: white !important;
 	background-color: var(--secondary-color);
 }
@@ -175,7 +212,9 @@ a.left-nav-link:hover {
 }
 
 .group-link:hover,
-.group-link:active {
+.group-link:active,
+.n-link:hover,
+.n-link:active {
 	background-color: var(--color-lighter-grey);
 }
 
@@ -188,9 +227,24 @@ a.left-nav-link:hover {
 	color: white;
 }
 
-.group-link {
+.group-link,
+.n-link {
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
+}
+
+.group-img-con {
+	width: 80px;
+	height: 80px;
+}
+
+.current-chat {
+	background-color: var(--secondary-color-light);
+}
+
+.n-active {
+	background-color: var(--secondary-color-light);
+	color: var(--secondary-color) !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -211,5 +265,46 @@ a.left-nav-link:hover {
 
 	.profile__pre-about {
 		padding-top: 180px;
+	}
+
+	.chat-container,
+	.chat-container > div {
+		height: initial !important;
+	}
+
+	.chat-container > div > div:last-child,
+	.chat-container > div > div:nth-child(4){
+		width: 100% !important;
+		height: initial !important;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	.group-img-con {
+		width: 40px;
+		height: 40px;
+	}
+
+	.group-side,
+	.group-item {
+		height: initial !important;
+		border: none !important;
+	}
+
+	.group-row {
+		background-color: white;
+	}
+
+	.group-item {
+		background-color: none;
+	}	
+
+	.chat-form > div:first-child {
+		width: 100%;
+	}
+
+	.n-img {
+		width: 50px !important;
+		height: 50px !important;
 	}
 }

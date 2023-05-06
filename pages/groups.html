@@ -12,7 +12,7 @@
 
 	<!-- Nav Section -->
 
-	<nav class="navbar navbar-expand-sm navbar-light bg-white d-flex justify-content-start justify-content-sm-between">
+	<nav class="navbar navbar-expand-sm navbar-light bg-white d-flex justify-content-start justify-content-sm-between fixed-top">
 		<a href="#" class="navbar-brand flex-grow-1 flex-sm-grow-0 d-flex justify-content-center">
 			<h3 class="color-secondary" style="font-family: cursive;">SocialNet</h3>
 		</a>
@@ -120,10 +120,10 @@
 		
 	</nav>
 
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container-fluid" style="margin-top: 68px;">
+		<div class="row group-row">
 			<div class="col-md-4" style="padding-left: 0;">
-				<div class="bg-white border p-3 group-side">
+				<div class="bg-white border pl-3 pr-md-3 py-3 group-side">
 					<div>
 						<h4 class="font-weight-bold">Groups</h4>
 					</div>
@@ -155,7 +155,7 @@
 						
 					</div>
 					<div class="mt-2">
-						<a href="#" class="btn bg-secondary-light create-group w-100">
+						<a href="#" class="btn bg-secondary-light blue-link w-100">
 							<i class="fa fa-plus mr-1"></i>
 							Create new group
 						</a>
@@ -163,7 +163,7 @@
 				</div>
 			</div>
 			<div class="col-md-8">
-				<div class="p-3">
+				<div class="px-md-3 py-3">
 					<div class="d-flex justify-content-between">
 						<span class="f-w6" style="font-size: 17px;">All groups you have joined (260)</span>
 						<div class="dropdown">
@@ -181,6 +181,116 @@
 									<span>Earliest joined first</span>
 									<i class="fa fa-check text-primary d-none"></i>
 								</a>
+							</div>
+						</div>
+					</div>
+					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 10px;" class="text-muted mt-4">
+						<div class="bg-white group-item rounded-lg border border-light p-2 p-md-2">
+							<div class="d-flex flex-nowrap align-items-center">
+								<div class="rounded group-img-con">
+									<img src="../images/django.png" class="rounded">
+								</div>
+								<div class="ml-3 d-flex flex-column">
+									<a href="#">
+										<span class="text-dark hover-blue f-w6">Django Developers' Network</span>
+									</a>
+									<span class="small">21.2K members</span>
+								</div>
+							</div>
+							<div class="d-none d-md-flex mt-3">
+								<a href="#" class="btn bg-secondary-light blue-link rounded-lg flex-grow-1">View group</a>
+								<div class="dropdown">
+									<button class="h-100 ml-3 btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
+										<i class="fa fa-ellipsis-h"></i>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a href="#" class="dropdown-item">
+												<i class="fa fa-user-times mr-2 text-danger"></i>
+												Leave group
+											</a>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white group-item rounded-lg border border-light p-2 p-md-2">
+							<div class="d-flex flex-nowrap align-items-center">
+								<div class="rounded group-img-con">
+									<img src="../images/python.png" class="rounded">
+								</div>
+								<div class="ml-3 d-flex flex-column">
+									<a href="#">
+										<span class="text-dark hover-blue f-w6">Python Programming</span>
+									</a>
+									<span class="small">21.2K members</span>
+								</div>
+							</div>
+							<div class="d-none d-md-flex mt-3">
+								<a href="#" class="btn bg-secondary-light blue-link rounded-lg flex-grow-1">View group</a>
+								<div class="dropdown">
+									<button class="h-100 ml-3 btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
+										<i class="fa fa-ellipsis-h"></i>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a href="#" class="dropdown-item">
+												<i class="fa fa-user-times mr-2 text-danger"></i>
+												Leave group
+											</a>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white group-item rounded-lg border border-light p-2 p-md-2">
+							<div class="d-flex flex-nowrap align-items-center">
+								<div class="rounded group-img-con">
+									<img src="../images/javascript.png" class="rounded">
+								</div>
+								<div class="ml-3 d-flex flex-column">
+									<a href="#">
+										<span class="text-dark hover-blue f-w6">JavaScript Developers</span>
+									</a>
+									<span class="small">21.2K members</span>
+								</div>
+							</div>
+							<div class="d-none d-md-flex mt-3">
+								<a href="#" class="btn bg-secondary-light blue-link rounded-lg flex-grow-1">View group</a>
+								<div class="dropdown">
+									<button class="h-100 ml-3 btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
+										<i class="fa fa-ellipsis-h"></i>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a href="#" class="dropdown-item">
+												<i class="fa fa-user-times mr-2 text-danger"></i>
+												Leave group
+											</a>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white group-item rounded-lg border border-light p-2 p-md-2">
+							<div class="d-flex flex-nowrap align-items-center">
+								<div class="rounded group-img-con">
+									<img src="../images/web-dev.jpg" class="rounded">
+								</div>
+								<div class="ml-3 d-flex flex-column">
+									<a href="#">
+										<span class="text-dark hover-blue f-w6">Learn Web Development</span>
+									</a>
+									<span class="small">21.2K members</span>
+								</div>
+							</div>
+							<div class="d-none d-md-flex mt-3">
+								<a href="#" class="btn bg-secondary-light blue-link rounded-lg flex-grow-1">View group</a>
+								<div class="dropdown">
+									<button class="h-100 ml-3 btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
+										<i class="fa fa-ellipsis-h"></i>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a href="#" class="dropdown-item">
+												<i class="fa fa-user-times mr-2 text-danger"></i>
+												Leave group
+											</a>
+										</div>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>

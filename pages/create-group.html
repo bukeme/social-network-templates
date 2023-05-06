@@ -44,7 +44,7 @@
 				<a href="#" class="nav-link bar-nav">
 					<i class="fa fa-bars icon-lg color-secondary"></i>
 				</a>
-				<div class="position-absolute rounded d-none bg-white shadow mobile-nav" style="top: 105%; right: 0; z-index: 3;">
+				<div class="position-absolute rounded bg-white d-none shadow mobile-nav" style="top: 105%; right: 0; z-index: 3;">
 					<ul class="list-group">
 						<li class="list-group-item d-flex align-items-center">
 							<a href="#" class="d-flex align-items-center w-100">
@@ -120,99 +120,23 @@
 		
 	</nav>
 
-	<div class="container" style="margin-top: 68px;">
-		<div class="row p-3">
-			<div class="col-12">
-				<div class="bg-white rounded-top">
-					<div style="height: 250px; background: url('../images/14.jpg') no-repeat center; background-size: cover;" class="rounded-top position-relative">
-						<div class="position-absolute d-flex justify-content-center justify-content-lg-start w-100" style="top: 100%; transform: translateY(-50%);">
-							<div class="rounded-circle p-1 bg-white ml-0 ml-lg-3 profile__profile-img">
-								<img src="../images/07.jpg" class="rounded-circle">
-							</div>
-						</div>
-						<div class="profile__name-row">
-							<div class="mt-2 mt-lg-0 d-flex d-lg-block flex-column align-items-center">
-								<h4>Sam Lanson</h4>
-								<div class="d-flex align-items-center text-muted">
-									<a href="#" class="text-muted hover-blue">5.3K Followers</a>
-									<i class="fa fa-circle mx-2" style="font-size: 5px;"></i>
-									<a href="#" class="text-muted hover-blue">400 Following</a>
-								</div>
-							</div>
-							<div class="mt-2 mt-lg-0">
-								<a href="#" class="btn btn-danger">
-									<i class="fa fa-pen mr-2"></i>
-									Edit Profile
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="bg-white profile__pre-about px-3 pb-1">
-						<div class="d-flex">
-							<div class="text-muted mr-3">
-								<i class="fa fa-briefcase mr-1"></i>
-								<span>Lead Developer</span>
-							</div>
-							<div class="text-muted mr-3">
-								<i class="fa fa-map-marker-alt mr-1"></i>
-								<span>New Castle</span>
-							</div>
-							<div class="text-muted mr-3">
-								<i class="fa fa-calendar mr-1"></i>
-								<span>Joined on Nov 26, 2019</span>
-							</div>
-						</div>
-						<hr class="mx-n3 my-4">
-						<ul class="nav nav-fill">
-							<li class="nav-item">
-								<a href="../pages/profile.html" class="nav-link nav-item-line text-muted font-weight-bold profile__profile-nav-link" style="font-size: 17px;">Post</a>
-							</li>
-							<li class="nav-item">
-								<a href="../pages/profile-about.html" class="nav-link nav-item-line text-muted font-weight-bold profile__profile-nav-link" style="font-size: 17px;">About</a>
-							</li>
-							<li class="nav-item">
-								<a href="../pages/friends.html" class="nav-link nav-item-line text-muted font-weight-bold profile__profile-nav-link" style="font-size: 17px;">Friends</a>
-							</li>
-							<li class="nav-item">
-								<a href="../pages/profile-photos.html" class="nav-link nav-item-line active text-muted font-weight-bold profile__profile-nav-link" style="font-size: 17px;">Photo</a>
-							</li>
-							<li class="nav-item">
-								<a href="../pages/profile-groups.html" class="nav-link nav-item-line text-muted font-weight-bold profile__profile-nav-link" style="font-size: 17px;">Groups</a>
-							</li>
-						</ul>
-					</div>
+	<div class="background-grey position-fixed w-100 h-100 d-flex justify-content-center align-items-center" style="top: 0; left: 0;">
+		<div class="card p-3 m-2" style="width: 70%">
+			<h4>Create a group</h4>
+			<form>
+				<div class="form-group">
+					<label>Group Name</label>
+					<input type="text" name="group-name" class="form-control">
 				</div>
-			</div>
-		</div>
-
-		<div class="row p-3">
-			<!-- Photos -->
-
-			<div class="col-12">
-				<div class="card p-3 bg-white mt-2">
-					<div class="d-flex justify-content-between">
-						<h4 class="font-weight-bold">Photos</h4>
-						<a href="#" class="btn btn-sm btn-outline-primary">See all photos</a>
-					</div>
-					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-gap: 10px;" class="mt-4">
-						<div>
-							<img src="../images/15.jpg" class="rounded">
-						</div>
-						<div>
-							<img src="../images/16.jpg" class="rounded">
-						</div>
-						<div>
-							<img src="../images/17.jpg" class="rounded">
-						</div>
-						<div>
-							<img src="../images/18.jpg" class="rounded">
-						</div>
-						<div>
-							<img src="../images/19.jpg" class="rounded">
-						</div>
-					</div>
+				<div class="form-group">
+					<label>About Group</label>
+					<textarea name="about-group" class="form-control"></textarea>
 				</div>
-			</div>
+				<div class="d-flex justify-content-end">
+					<a href="#" class="btn btn-warning mr-2">Exit</a>
+					<button type="submit" class="btn btn-primary">Create Group</button>
+				</div>
+			</form>
 		</div>
 	</div>
 
@@ -220,6 +144,7 @@
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/post_list.js"></script>
+	<script src="../js/chat.js"></script>
 	<script>
 		const profileImg = document.querySelector('.profile-img');
 		const profileElement = document.querySelector('.profile-element');
@@ -238,5 +163,5 @@
 		  $('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
+
 </body>
-</html>
